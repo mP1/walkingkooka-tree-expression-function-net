@@ -7,3 +7,9 @@
 
 # walkingkooka-tree-expression-function-net
 A collection of ExpressionFunction(s) with a internet focus
+
+## Available functions
+
+- encodeUrl(string)
+
+Many more functions are outstanding and remain TODO.
