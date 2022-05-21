@@ -19,7 +19,7 @@
 package walkingkooka.tree.expression.function.net;
 
 import walkingkooka.Cast;
-import walkingkooka.tree.expression.function.ExpressionFunctionContext;
+import walkingkooka.tree.expression.ExpressionEvaluationContext;
 import walkingkooka.tree.expression.function.ExpressionFunctionParameter;
 
 import java.io.UnsupportedEncodingException;
@@ -29,11 +29,11 @@ import java.util.List;
 /**
  * A function that cleans (removes unprintable control characters from the given {@link String}.
  */
-final class StringExpressionFunctionEncodeUrl<C extends ExpressionFunctionContext> extends StringExpressionFunction<C> {
+final class StringExpressionFunctionEncodeUrl<C extends ExpressionEvaluationContext> extends StringExpressionFunction<C> {
     /**
      * Instance getter.
      */
-    static <C extends ExpressionFunctionContext> StringExpressionFunctionEncodeUrl<C> instance() {
+    static <C extends ExpressionEvaluationContext> StringExpressionFunctionEncodeUrl<C> instance() {
         return Cast.to(INSTANCE);
     }
 

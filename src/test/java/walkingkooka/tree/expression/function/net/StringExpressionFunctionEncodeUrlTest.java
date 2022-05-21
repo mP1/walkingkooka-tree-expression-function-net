@@ -19,9 +19,9 @@ package walkingkooka.tree.expression.function.net;
 
 import org.junit.jupiter.api.Test;
 import walkingkooka.Cast;
-import walkingkooka.tree.expression.function.ExpressionFunctionContext;
+import walkingkooka.tree.expression.ExpressionEvaluationContext;
 
-public final class StringExpressionFunctionEncodeUrlTest extends StringExpressionFunctionTestCase<StringExpressionFunctionEncodeUrl<ExpressionFunctionContext>, String> {
+public final class StringExpressionFunctionEncodeUrlTest extends StringExpressionFunctionTestCase<StringExpressionFunctionEncodeUrl<ExpressionEvaluationContext>, String> {
 
     @Test
     public void testEncodedUnnecessary() {
@@ -56,12 +56,12 @@ public final class StringExpressionFunctionEncodeUrlTest extends StringExpressio
     }
 
     @Override
-    public StringExpressionFunctionEncodeUrl<ExpressionFunctionContext> createBiFunction() {
+    public StringExpressionFunctionEncodeUrl<ExpressionEvaluationContext> createBiFunction() {
         return StringExpressionFunctionEncodeUrl.instance();
     }
 
     @Override
-    public Class<StringExpressionFunctionEncodeUrl<ExpressionFunctionContext>> type() {
+    public Class<StringExpressionFunctionEncodeUrl<ExpressionEvaluationContext>> type() {
         return Cast.to(StringExpressionFunctionEncodeUrl.class);
     }
 }

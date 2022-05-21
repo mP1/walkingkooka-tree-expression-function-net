@@ -20,7 +20,7 @@ package walkingkooka.tree.expression.function.net;
 import walkingkooka.collect.list.Lists;
 import walkingkooka.reflect.PublicStaticHelper;
 import walkingkooka.tree.expression.function.ExpressionFunction;
-import walkingkooka.tree.expression.function.ExpressionFunctionContext;
+import walkingkooka.tree.expression.ExpressionEvaluationContext;
 
 import java.util.function.Consumer;
 
@@ -41,7 +41,7 @@ public final class NetExpressionFunctions implements PublicStaticHelper {
     /**
      * {@see StringExpressionFunctionEncodeUrl}
      */
-    public static <C extends ExpressionFunctionContext> ExpressionFunction<String, C> encodeUrl() {
+    public static <C extends ExpressionEvaluationContext> ExpressionFunction<String, C> encodeUrl() {
         return StringExpressionFunctionEncodeUrl.instance();
     }
 
