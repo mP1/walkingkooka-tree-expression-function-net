@@ -17,15 +17,12 @@
 
 package walkingkooka.tree.expression.function.net;
 
+import walkingkooka.tree.expression.ExpressionEvaluationContext;
 import walkingkooka.tree.expression.ExpressionPurityContext;
 import walkingkooka.tree.expression.FunctionExpressionName;
 import walkingkooka.tree.expression.function.ExpressionFunction;
-import walkingkooka.tree.expression.ExpressionEvaluationContext;
-import walkingkooka.tree.expression.function.ExpressionFunctionKind;
 import walkingkooka.tree.expression.function.ExpressionFunctionParameter;
-
-import java.util.EnumSet;
-import java.util.Set;
+import walkingkooka.tree.expression.function.ExpressionFunctionParameterKind;
 
 /**
  * Base class for many {@link ExpressionFunction} within this package.
@@ -55,23 +52,13 @@ abstract class StringExpressionFunction<C extends ExpressionEvaluationContext> i
         return true;
     }
 
-    final static ExpressionFunctionParameter<String> TEXT = ExpressionFunctionParameter.TEXT;
+    final static ExpressionFunctionParameter<String> TEXT = ExpressionFunctionParameter.TEXT
+            .setKinds(ExpressionFunctionParameterKind.CONVERT_EVALUATE_RESOLVE_REFERENCES);
 
     @Override
     public final Class<String> returnType() {
         return String.class;
     }
-
-    @Override
-    public final Set<ExpressionFunctionKind> kinds() {
-        return KINDS;
-    }
-
-    private final Set<ExpressionFunctionKind> KINDS = EnumSet.of(
-            ExpressionFunctionKind.CONVERT_PARAMETERS,
-            ExpressionFunctionKind.EVALUATE_PARAMETERS,
-            ExpressionFunctionKind.RESOLVE_REFERENCES
-    );
 
     @Override
     public final String toString() {
