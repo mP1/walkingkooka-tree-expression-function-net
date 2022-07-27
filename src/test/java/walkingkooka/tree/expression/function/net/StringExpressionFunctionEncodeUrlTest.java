@@ -61,6 +61,11 @@ public final class StringExpressionFunctionEncodeUrlTest extends StringExpressio
     }
 
     @Override
+    public int minimumParameterCount() {
+        return 1;
+    }
+
+    @Override
     public Class<StringExpressionFunctionEncodeUrl<ExpressionEvaluationContext>> type() {
         return Cast.to(StringExpressionFunctionEncodeUrl.class);
     }
