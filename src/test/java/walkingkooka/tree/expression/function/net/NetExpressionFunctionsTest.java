@@ -35,7 +35,7 @@ public final class NetExpressionFunctionsTest implements PublicStaticHelperTesti
     @Test
     public void testVisit() {
         final Set<FunctionExpressionName> names = Sets.sorted();
-        NetExpressionFunctions.visit((e) -> names.add(e.name()));
+        NetExpressionFunctions.visit((e) -> names.add(e.name().get()));
 
         this.checkEquals(
                 Arrays.stream(NetExpressionFunctions.class.getDeclaredMethods())
