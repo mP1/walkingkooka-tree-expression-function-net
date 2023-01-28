@@ -20,6 +20,10 @@ import com.google.j2cl.junit.apt.J2clTestInput;
 import org.junit.Assert;
 import org.junit.Test;
 
+import walkingkooka.collect.list.Lists;
+import walkingkooka.tree.expression.ExpressionEvaluationContexts;
+import walkingkooka.tree.expression.function.net.NetExpressionFunctions;
+
 @J2clTestInput(JunitTest.class)
 public class JunitTest {
 
@@ -28,6 +32,20 @@ public class JunitTest {
         Assert.assertEquals(
                 true,
                 true
+        );
+    }
+
+    @Test
+    public void testEncodeUrl() {
+        Assert.assertEquals(
+                "Hello+Goodbye",
+                NetExpressionFunctions.encodeUrl()
+                        .apply(
+                                Lists.of(
+                                        "Hello Goodbye"
+                                ),
+                                ExpressionEvaluationContexts.fake()
+                        )
         );
     }
 }
