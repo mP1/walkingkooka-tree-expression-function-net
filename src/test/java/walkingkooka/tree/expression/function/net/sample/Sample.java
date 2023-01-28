@@ -17,10 +17,22 @@
 
 package walkingkooka.tree.expression.function.net.sample;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Assertions;
+import walkingkooka.collect.list.Lists;
+import walkingkooka.tree.expression.ExpressionEvaluationContexts;
+import walkingkooka.tree.expression.function.net.NetExpressionFunctions;
 
 public final class Sample {
     public static void main(final String[] args) {
-        assertEquals(true, true);
+        Assertions.assertEquals(
+                "Hello+Goodbye",
+                NetExpressionFunctions.encodeUrl()
+                        .apply(
+                                Lists.of(
+                                        "Hello Goodbye"
+                                ),
+                                ExpressionEvaluationContexts.fake()
+                        )
+        );
     }
 }
