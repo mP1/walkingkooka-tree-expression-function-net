@@ -30,6 +30,7 @@ jobs:
         if: ${{ always() }}
         run: |
           tail -n 500 target/it-tests/junit-test/build.log
+          tail -n 500 target/it-tests/gwt-jar-test/build.log
           tail -n 500 output.txt
 
       - uses: actions/upload-artifact@v2
