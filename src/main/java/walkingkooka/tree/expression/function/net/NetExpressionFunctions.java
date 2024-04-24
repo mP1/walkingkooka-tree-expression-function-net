@@ -18,9 +18,13 @@
 package walkingkooka.tree.expression.function.net;
 
 import walkingkooka.collect.list.Lists;
+import walkingkooka.collect.set.Sets;
+import walkingkooka.net.Url;
 import walkingkooka.reflect.PublicStaticHelper;
-import walkingkooka.tree.expression.function.ExpressionFunction;
 import walkingkooka.tree.expression.ExpressionEvaluationContext;
+import walkingkooka.tree.expression.function.ExpressionFunction;
+import walkingkooka.tree.expression.function.provider.ExpressionFunctionProvider;
+import walkingkooka.tree.expression.function.provider.ExpressionFunctionProviders;
 
 import java.util.function.Consumer;
 
@@ -29,6 +33,17 @@ import java.util.function.Consumer;
  */
 public final class NetExpressionFunctions implements PublicStaticHelper {
 
+    /**
+     * An {@link ExpressionFunctionProvider} with all the functions in this project.
+     */
+    public static ExpressionFunctionProvider expressionFunctionProvider() {
+        return ExpressionFunctionProviders.basic(
+                Url.parseAbsolute("https://github.com/mP1/walkingkooka-tree-expression-function-net/"),
+                Sets.of(
+                        encodeUrl()
+                )
+        );
+    }
     /**
      * Visit all {@link ExpressionFunction functions}.
      */
