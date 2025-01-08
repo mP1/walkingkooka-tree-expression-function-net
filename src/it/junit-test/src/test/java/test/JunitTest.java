@@ -30,22 +30,22 @@ public class JunitTest {
     @Test
     public void testTrue() {
         Assert.assertEquals(
-                true,
-                true
+            true,
+            true
         );
     }
 
     @Test
     public void testEncodeUrl() {
         Assert.assertEquals(
-                "Hello+Goodbye",
-                NetExpressionFunctions.encodeUrl()
-                        .apply(
-                                Lists.of(
-                                        "Hello Goodbye"
-                                ),
-                                ExpressionEvaluationContexts.fake()
-                        )
+            "Hello+Goodbye",
+            NetExpressionFunctions.encodeUrl()
+                .apply(
+                    Lists.of(
+                        "Hello Goodbye"
+                    ),
+                    ExpressionEvaluationContexts.fake()
+                )
         );
     }
 }

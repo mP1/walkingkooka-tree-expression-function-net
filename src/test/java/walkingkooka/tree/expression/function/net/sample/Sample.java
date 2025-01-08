@@ -25,14 +25,14 @@ import walkingkooka.tree.expression.function.net.NetExpressionFunctions;
 public final class Sample {
     public static void main(final String[] args) {
         Assertions.assertEquals(
-                "Hello+Goodbye",
-                NetExpressionFunctions.encodeUrl()
-                        .apply(
-                                Lists.of(
-                                        "Hello Goodbye"
-                                ),
-                                ExpressionEvaluationContexts.fake()
-                        )
+            "Hello+Goodbye",
+            NetExpressionFunctions.encodeUrl()
+                .apply(
+                    Lists.of(
+                        "Hello Goodbye"
+                    ),
+                    ExpressionEvaluationContexts.fake()
+                )
         );
     }
 }

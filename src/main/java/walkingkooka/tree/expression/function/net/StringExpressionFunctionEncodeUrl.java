@@ -56,8 +56,8 @@ final class StringExpressionFunctionEncodeUrl<C extends ExpressionEvaluationCont
 
         try {
             return URLEncoder.encode(
-                    TEXT.getOrFail(parameters, 0),
-                    "UTF-8"
+                TEXT.getOrFail(parameters, 0),
+                "UTF-8"
             );
         } catch (final UnsupportedEncodingException e) {
             throw new Error("Unable to encode with UTF-8", e); // shouldnt happen
