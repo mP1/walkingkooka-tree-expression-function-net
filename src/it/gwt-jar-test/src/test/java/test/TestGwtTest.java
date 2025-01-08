@@ -17,21 +17,21 @@ public class TestGwtTest extends GWTTestCase {
 
     public void testAssertEquals() {
         assertEquals(
-                1,
-                1
+            1,
+            1
         );
     }
 
     public void testEncodeUrl() {
         assertEquals(
-                "Hello+Goodbye",
-                NetExpressionFunctions.encodeUrl()
-                        .apply(
-                                Lists.of(
-                                        "Hello Goodbye"
-                                ),
-                                ExpressionEvaluationContexts.fake()
-                        )
+            "Hello+Goodbye",
+            NetExpressionFunctions.encodeUrl()
+                .apply(
+                    Lists.of(
+                        "Hello Goodbye"
+                    ),
+                    ExpressionEvaluationContexts.fake()
+                )
         );
     }
 }

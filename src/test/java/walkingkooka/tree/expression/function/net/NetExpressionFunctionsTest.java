@@ -34,15 +34,15 @@ public final class NetExpressionFunctionsTest implements PublicStaticHelperTesti
     @Test
     public void testExpressionFunctionProvider() {
         this.checkEquals(
-                Arrays.stream(NetExpressionFunctions.class.getDeclaredMethods())
-                        .filter(m -> m.getReturnType() == ExpressionFunction.class)
-                        .map(Method::getName)
-                        .collect(Collectors.toCollection(SortedSets::tree)),
-                NetExpressionFunctions.expressionFunctionProvider(CaseSensitivity.SENSITIVE)
-                        .expressionFunctionInfos()
-                        .stream()
-                        .map(i -> i.name().value())
-                        .collect(Collectors.toCollection(SortedSets::tree))
+            Arrays.stream(NetExpressionFunctions.class.getDeclaredMethods())
+                .filter(m -> m.getReturnType() == ExpressionFunction.class)
+                .map(Method::getName)
+                .collect(Collectors.toCollection(SortedSets::tree)),
+            NetExpressionFunctions.expressionFunctionProvider(CaseSensitivity.SENSITIVE)
+                .expressionFunctionInfos()
+                .stream()
+                .map(i -> i.name().value())
+                .collect(Collectors.toCollection(SortedSets::tree))
         );
     }
 

@@ -39,19 +39,20 @@ public final class NetExpressionFunctions implements PublicStaticHelper {
      */
     public static ExpressionFunctionProvider expressionFunctionProvider(final CaseSensitivity nameCaseSensitivity) {
         return ExpressionFunctionProviders.basic(
-                Url.parseAbsolute("https://github.com/mP1/walkingkooka-tree-expression-function-net/"),
-                nameCaseSensitivity,
-                Sets.of(
-                        encodeUrl()
-                )
+            Url.parseAbsolute("https://github.com/mP1/walkingkooka-tree-expression-function-net/"),
+            nameCaseSensitivity,
+            Sets.of(
+                encodeUrl()
+            )
         );
     }
+
     /**
      * Visit all {@link ExpressionFunction functions}.
      */
     public static void visit(final Consumer<ExpressionFunction<?, ?>> consumer) {
         Lists.of(
-                encodeUrl()
+            encodeUrl()
         ).forEach(consumer);
     }
 

@@ -26,32 +26,32 @@ public final class StringExpressionFunctionEncodeUrlTest extends StringExpressio
     @Test
     public void testEncodedUnnecessary() {
         this.applyAndCheck2(
-                parameters("abc123"),
-                "abc123"
+            parameters("abc123"),
+            "abc123"
         );
     }
 
     @Test
     public void testEncodedSpaceWithPlus() {
         this.applyAndCheck2(
-                parameters("abc def"),
-                "abc+def"
+            parameters("abc def"),
+            "abc+def"
         );
     }
 
     @Test
     public void testEncoded() {
         this.applyAndCheck2(
-                parameters("x+123"),
-                "x%2B123"
+            parameters("x+123"),
+            "x%2B123"
         );
     }
 
     @Test
     public void testToString() {
         this.toStringAndCheck(
-                this.createBiFunction(),
-                "encodeUrl"
+            this.createBiFunction(),
+            "encodeUrl"
         );
     }
 
