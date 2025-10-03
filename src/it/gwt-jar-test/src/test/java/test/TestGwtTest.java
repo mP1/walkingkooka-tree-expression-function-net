@@ -5,7 +5,7 @@ import com.google.gwt.junit.client.GWTTestCase;
 import walkingkooka.collect.list.Lists;
 import walkingkooka.j2cl.locale.LocaleAware;
 import walkingkooka.tree.expression.ExpressionEvaluationContexts;
-import walkingkooka.tree.expression.function.net.NetExpressionFunctions;
+import walkingkooka.tree.expression.function.net.TreeNetExpressionFunctions;
 
 @LocaleAware
 public class TestGwtTest extends GWTTestCase {
@@ -25,7 +25,7 @@ public class TestGwtTest extends GWTTestCase {
     public void testEncodeUrl() {
         assertEquals(
             "Hello+Goodbye",
-            NetExpressionFunctions.encodeUrl()
+            TreeNetExpressionFunctions.encodeUrl()
                 .apply(
                     Lists.of(
                         "Hello Goodbye"

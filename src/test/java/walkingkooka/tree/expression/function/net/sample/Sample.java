@@ -20,13 +20,13 @@ package walkingkooka.tree.expression.function.net.sample;
 import org.junit.jupiter.api.Assertions;
 import walkingkooka.collect.list.Lists;
 import walkingkooka.tree.expression.ExpressionEvaluationContexts;
-import walkingkooka.tree.expression.function.net.NetExpressionFunctions;
+import walkingkooka.tree.expression.function.net.TreeNetExpressionFunctions;
 
 public final class Sample {
     public static void main(final String[] args) {
         Assertions.assertEquals(
             "Hello+Goodbye",
-            NetExpressionFunctions.encodeUrl()
+            TreeNetExpressionFunctions.encodeUrl()
                 .apply(
                     Lists.of(
                         "Hello Goodbye"

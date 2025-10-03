@@ -32,7 +32,7 @@ import java.util.function.Consumer;
 /**
  * Collection of static factory methods for numerous {@link ExpressionFunction}.
  */
-public final class NetExpressionFunctions implements PublicStaticHelper {
+public final class TreeNetExpressionFunctions implements PublicStaticHelper {
 
     /**
      * An {@link ExpressionFunctionProvider} with all the functions in this project.
@@ -66,7 +66,7 @@ public final class NetExpressionFunctions implements PublicStaticHelper {
     /**
      * Stops creation
      */
-    private NetExpressionFunctions() {
+    private TreeNetExpressionFunctions() {
         throw new UnsupportedOperationException();
     }
 }
