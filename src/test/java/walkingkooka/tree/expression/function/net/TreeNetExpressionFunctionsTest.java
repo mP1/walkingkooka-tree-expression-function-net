@@ -29,16 +29,16 @@ import java.math.MathContext;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
-public final class NetExpressionFunctionsTest implements PublicStaticHelperTesting<NetExpressionFunctions> {
+public final class TreeNetExpressionFunctionsTest implements PublicStaticHelperTesting<TreeNetExpressionFunctions> {
 
     @Test
     public void testExpressionFunctionProvider() {
         this.checkEquals(
-            Arrays.stream(NetExpressionFunctions.class.getDeclaredMethods())
+            Arrays.stream(TreeNetExpressionFunctions.class.getDeclaredMethods())
                 .filter(m -> m.getReturnType() == ExpressionFunction.class)
                 .map(Method::getName)
                 .collect(Collectors.toCollection(SortedSets::tree)),
-            NetExpressionFunctions.expressionFunctionProvider(CaseSensitivity.SENSITIVE)
+            TreeNetExpressionFunctions.expressionFunctionProvider(CaseSensitivity.SENSITIVE)
                 .expressionFunctionInfos()
                 .stream()
                 .map(i -> i.name().value())
@@ -52,8 +52,8 @@ public final class NetExpressionFunctionsTest implements PublicStaticHelperTesti
     }
 
     @Override
-    public Class<NetExpressionFunctions> type() {
-        return NetExpressionFunctions.class;
+    public Class<TreeNetExpressionFunctions> type() {
+        return TreeNetExpressionFunctions.class;
     }
 
     @Override

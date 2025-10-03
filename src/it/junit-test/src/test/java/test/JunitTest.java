@@ -22,7 +22,7 @@ import org.junit.Test;
 
 import walkingkooka.collect.list.Lists;
 import walkingkooka.tree.expression.ExpressionEvaluationContexts;
-import walkingkooka.tree.expression.function.net.NetExpressionFunctions;
+import walkingkooka.tree.expression.function.net.TreeNetExpressionFunctions;
 
 @J2clTestInput(JunitTest.class)
 public class JunitTest {
@@ -44,7 +44,7 @@ public class JunitTest {
                     Lists.of(
                         "Hello Goodbye"
                     ),
-                    ExpressionEvaluationContexts.fake()
+                    TreeExpressionEvaluationContexts.fake()
                 )
         );
     }
