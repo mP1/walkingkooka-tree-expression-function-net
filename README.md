@@ -11,6 +11,6 @@ A collection of ExpressionFunction(s) with a internet focus
 
 ## Available functions
 
-- encodeUrl(string)
+- [encodeUrl](https://github.com/mP1/walkingkooka-tree-expression-function-net/blob/master/src/main/java/walkingkooka/tree/expression/function/net/StringExpressionFunctionEncodeUrl.java)
 
 Many more functions are outstanding and remain TODO.
