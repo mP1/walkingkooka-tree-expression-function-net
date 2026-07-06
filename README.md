@@ -9,7 +9,7 @@
 # walkingkooka-tree-expression-function-net
 A collection of ExpressionFunction(s) with a internet focus
 
-## Available functions
+## [Functions](https://github.com/mP1/walkingkooka-tree/blob/master/src/main/java/walkingkooka/tree/expression/function/ExpressionFunction.java)
 
 - [encodeUrl](https://github.com/mP1/walkingkooka-tree-expression-function-net/blob/master/src/main/java/walkingkooka/tree/expression/function/net/StringExpressionFunctionEncodeUrl.java)
 
